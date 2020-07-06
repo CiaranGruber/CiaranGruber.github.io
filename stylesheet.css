@@ -1,0 +1,122 @@
+:root {
+    --light-blue-theme-colour: #D6FFF6;
+    --blue-theme-colour: #9EDFDE;
+    --dark-blue-theme-colour: #63AAA9;
+    --red-theme-colour: #cf5959;
+    --yellow-theme-colour: #FFCC7A;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+}
+
+#title {
+    display: flex;
+}
+
+header h1 {
+    margin: auto;
+    font-family: "Saira Semi Condensed", sans-serif;
+    font-size: 3em;
+    padding: 0.5em 0;
+}
+
+nav a {
+    background-color: var(--blue-theme-colour);
+    transition: background-color .2s ease-in-out;
+    padding: 1em;
+    color: black;
+}
+
+nav a:hover {
+    background-color: var(--light-blue-theme-colour);
+}
+
+nav a:active {
+    background-color: var(--light-blue-theme-colour);
+    box-shadow:
+        2px 2px 10px rgba(0, 0, 0, .25) inset,
+        -2px -2px 10px white inset;
+}
+
+nav a:hover:not(.current-page) {
+    color: black;
+}
+
+nav .current-page {
+    color: var(--red-theme-colour);
+}
+
+nav#bottom {
+    background-color: black;
+    display: flex;
+}
+
+#bottom a {
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 699px) {
+    nav#top {
+        background-color: black;
+        padding-left: 1em;
+        padding-right: 1em;
+        display: flex;
+    }
+
+    #top-nav.navigation {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #top-nav a {
+        margin: 1em;
+        border-radius: 1em;
+    }
+
+    #dropdown-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 699px) {
+    nav * {
+        text-align: center;
+    }
+
+    #dropdown-nav {
+        background-color: var(--blue-theme-colour);
+        transition: background-color .2s ease-in-out;
+        padding: 0.2em;
+        font-size: 2em;
+    }
+
+    #dropdown-nav:hover {
+        background-color: var(--dark-blue-theme-colour);
+        cursor: pointer;
+    }
+
+    #top-nav a {
+        display: none;
+    }
+
+    #top-nav.responsive a {
+        display: block;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+    transition: color .2s ease-in-out;
+}
+
+a:hover:not(.current-page) {
+    color: lightgrey;
+}
+
+.container {
+    margin-top: 1em;
+}
